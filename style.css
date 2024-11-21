@@ -1,0 +1,92 @@
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+#app {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+h1 {
+  text-align: center;
+  color: #2d6a4f;
+}
+
+/* Estilos para os inputs */
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botões verdes (gerais) */
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+/* Botão vermelho de deletar */
+.btn-red {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: #c82333;
+}
+
+/* Listagem de jogadores */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin: 8px 0;
+  display: flex;
+  flex-direction: column; /* Faz os itens aparecerem em colunas, um abaixo do outro */
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+div {
+  font-size: 14px;
+  margin: 4px 0; /* Distância entre as linhas */
+}
+
+strong {
+  color: #2d6a4f;
+}
+
+button.btn-green {
+  margin-top: 10px;
+}
+
+/* Estilo para a tela */
+h2 {
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}

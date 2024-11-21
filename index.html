@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Jogadores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="app">
+    <h1>Cadastro de Jogadores de Futebol</h1>
+
+    <!-- Tela de Cadastro -->
+    <div v-if="screen === 'cadastro'">
+      <input v-model="newPlayer.name" placeholder="Nome do Jogador" type="text">
+      <input v-model="newPlayer.marketValue" placeholder="Valor de Mercado" type="number">
+      <input v-model="newPlayer.team" placeholder="Time Atual" type="text">
+      <input v-model="newPlayer.position" placeholder="Posição" type="text">
+      <button class="btn-green" @click="addPlayer">Adicionar Jogador</button>
+      <button class="btn-green" @click="goToListScreen">Ir para Listagem</button>
+    </div>
+
+    <!-- Tela de Listagem -->
+    <div v-if="screen === 'listagem'">
+      <h2>Lista de Jogadores</h2>
+      <ul>
+        <li v-for="(player, index) in players" :key="index">
+          <div><strong>Nome:</strong> {{ player.name }}</div>
+          <div><strong>Time:</strong> {{ player.team }}</div>
+          <div><strong>Posição:</strong> {{ player.position }}</div>
+          <div><strong>Valor de Mercado:</strong> R$ {{ player.marketValue | currency }}</div>
+          <button class="btn-red" @click="deletePlayer(index)">Deletar</button>
+        </li>
+      </ul>
+      <button class="btn-green" @click="goToCadastroScreen">Ir para Cadastro</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
